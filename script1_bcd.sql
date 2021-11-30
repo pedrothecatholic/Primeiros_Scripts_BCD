@@ -165,5 +165,29 @@ create table tblFilmeGenero (
 	idFilmeGenero int not null auto_increment primary key,
     idFilme int not null,
     idGenero int not null
+);
+
+create table tblFilmeDiretor (
+	idFilmeDiretor int not null auto_increment primary key,
+    idFilme int not null,
+    idGenero int not null
+);
+
+create table tblDiretorNacionalidade (
+	idDiretorNacionalidade int not null auto_increment primary key,
+    idDiretor int not null,
+    idGenero int not null
+);
+
+create table tblRoteiristaNacionalidade(
+	idRoteiristaNacionalidade int not null auto_increment primary key,
+    idRoteirista int not null,
+    idNacionalidade int not null
+);
+
+create table tblAtorNacionalidade (
+	idAtorNacionalidade int not null auto_increment primary key,
+    idAtor int not null,
+    idNacionalidade int not null
 )
 
