@@ -44,5 +44,26 @@ from   tblFilme right join tblFilmeGenero
 			on tblGenero.idGenero = tblFilmeGenero.idGenero;
 
 
+#Ex.: 
+select tblFilme.nome as nomeFilme, tblfilme.tituloOriginal,
+	   tblFilme.duracao, tblGenero.nome as nomeGenero,
+       tblAtor.nome as nomeAtor,
+       tblAtor.dataNascimento as dataNascimentoAtor,
+       tblSexo.nome as nomeSexoAtor
+from tblFilme inner join tblFilmeGenero
+			on tblFilme.idFilme = tblFilmeGenero.idFilme
+		inner join tblGenero
+			on tblGenero.idGenero = tblFilmeGenero.idGenero
+		inner join tblFilmeAtor
+			on tblFilme.idFilme = tblFilmeAtor.idFilme
+		inner join tblAtor
+			on tblAtor.idAtor = tblFilmeAtor.idAtor
+		inner join tblSexo
+			on tblSexo.idSexo - tblAtor.idSexo
+where year(tblFilme.dataLancamento) >= 2010 and
+      year(tblAtor.dataNascimento) >= 1980 and
+      tblSexo.idSexo = 2;
 
-#Ex.:  
+
+
+

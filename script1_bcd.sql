@@ -170,13 +170,13 @@ create table tblFilmeGenero (
 create table tblFilmeDiretor (
 	idFilmeDiretor int not null auto_increment primary key,
     idFilme int not null,
-    idGenero int not null
+    idDiretor int not null
 );
 
 create table tblDiretorNacionalidade (
 	idDiretorNacionalidade int not null auto_increment primary key,
     idDiretor int not null,
-    idGenero int not null
+    idNacionalidade int not null
 );
 
 create table tblRoteiristaNacionalidade(
